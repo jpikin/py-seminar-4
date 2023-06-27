@@ -7,9 +7,7 @@
 n, m = int(input()), int(input())
 
 def set_create(x):
-    temp_set = set()
-    for i in range(x):
-        temp_set.add(int(input()))
+    temp_set = {int(input()) for _ in range(x)}
     return temp_set    
 
 print(*sorted(set_create(n) & set_create(m)))
