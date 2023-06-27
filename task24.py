@@ -9,7 +9,20 @@
 
 from random import randint
 
+
+def find_max_sum(x,y):
+    if x > y: return x
+    else: return y
+
 n = int(input())
 bushes = [randint(1,10) for _ in range(n)]
 
+max_sum = bushes[-1] + bushes[0] + bushes[1]
+
+for i in range(1, len(bushes)-1):
+    max_sum = find_max_sum(max_sum, bushes[i-1] + bushes[i] + bushes[i+1])
+
+max_sum = find_max_sum(max_sum, bushes[-2] + bushes[-1] + bushes[0]) 
+
 print(bushes)
+print(max_sum)
