@@ -4,10 +4,9 @@
 # Пользователь вводит 2 числа. n — кол-во элементов первого множества. m — кол-во элементов второго множества. 
 # Затем пользователь вводит сами элементы множеств.
 
-n, m = int(input()), int(input())
 
 def set_create(x):
-    temp_set = {int(input()) for _ in range(x)}
-    return temp_set    
+    return {int(input()) for _ in range(x)}
 
+n, m = int(input()), int(input())
 print(*sorted(set_create(n) & set_create(m)))
