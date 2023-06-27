@@ -9,4 +9,4 @@ for j in range(len(lst)):
             total.append(lst[j][0])
     if 'anton' in ''.join(total):
         print(j + 1, end = ' ')
-        total.clear()
+    total.clear()
