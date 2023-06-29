@@ -26,3 +26,17 @@ max_sum = find_max_sum(max_sum, bushes[-2] + bushes[-1] + bushes[0])
 
 print(bushes)
 print(max_sum)
+
+
+
+
+
+# 2 Вариант:
+# n, max_sum = int(input()), 0
+# bushes = [randint(1,10) for _ in range(n)]
+
+# for i in range(len(bushes)):
+#     max_sum = max(max_sum, bushes[i-2] + bushes[i-1] + bushes[i])
+
+# print(bushes)
+# print(max_sum)
